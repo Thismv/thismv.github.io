@@ -2,7 +2,7 @@
 
 Live at: [thismv.github.io/Personal_Website.github.io](https://thismv.github.io/Personal_Website.github.io)
 
-![Preview](preview.png)
+![Preview](./General%20docs/preview.png)
 
 My personal corner of the internet — a portfolio, a resume, and a place to share my work without the constraints of a single page. Built with HTML, CSS, and JavaScript, hosted on GitHub Pages.
 
@@ -19,7 +19,9 @@ First time building a website. AI (Claude & GPT) was involved throughout the pro
 ## Files
 - `index.html` — page structure and content
 - `style.css` — all styling
-- `headshot.png`, `preview.png`, `Resume.pdf` — assets in repo root (optional: move into `General docs/` and update paths in `index.html`)
+- `General docs/` — `Resume.pdf`, `headshot.png`, `preview.png` (paths in `index.html` and this README point here)
+
+**Note:** The live site is a **project** GitHub Page at `…/Personal_Website.github.io/`, so asset URLs are resolved from that folder (e.g. `General%20docs/headshot.png` → `https://thismv.github.io/Personal_Website.github.io/General%20docs/headshot.png`).
 
 ## Built With
 - HTML, CSS, Vanilla JavaScript
