@@ -37,8 +37,9 @@
 
 [data-theme="light"] {
   color-scheme: light;
-  --dark-a: #f0f2f7;
-  --dark-card: #ffffff;
+  /* Warm paper-like neutrals (easier on the eyes than pure white / cool gray) */
+  --dark-a: #e8e4dc;
+  --dark-card: #f2efe8;
   --ink: #111827;
   --ink-dim: rgba(17,24,39,0.72);
   --ink-faint: rgba(17,24,39,0.38);
@@ -51,7 +52,7 @@
   --border-hover: rgba(17,24,39,0.2);
   --shadow: 0 4px 24px rgba(17,24,39,0.08);
   --shadow-hover: 0 16px 48px rgba(17,24,39,0.12);
-  --nav-bg: rgba(240,242,247,0.82);
+  --nav-bg: rgba(232, 228, 220, 0.88);
   --nav-border-scrolled: rgba(17,24,39,0.08);
   --hero-glow-1: rgba(47,111,224,0.11);
   --hero-glow-2: rgba(74,138,244,0.07);
