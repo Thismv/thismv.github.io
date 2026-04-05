@@ -4,9 +4,7 @@ Live at: **[thismv.github.io](https://thismv.github.io/)**
 
 ![Preview](./General%20docs/preview.png)
 
-My personal corner of the internet — a portfolio, a resume, and a place to share my work without the constraints of a single page. Built with HTML, CSS, and JavaScript, hosted on GitHub Pages (user site from the `thismv.github.io` repository).
-
-First time building a website. AI (Claude & GPT) was involved throughout the process — from design to code to iteration. I use AI wherever it helps me build and understand things faster, and I'm not shy about it.
+A personal portfolio and professional home base, built to share my work, background, and thinking without the constraints of a one-page resume. Built with HTML, CSS, and JavaScript and hosted on GitHub Pages. AI (Claude and GPT) was involved throughout, from design decisions to code to iteration.
 
 ## Sections
 - **Hero** — intro, “Me, right now,” and links
