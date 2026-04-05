@@ -3,41 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mohammad Valizadehmoghadam | Risk Analytics</title>
+  <title>MV · Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
 
   <!-- NAV -->
   <nav id="navbar">
     <a href="#" class="nav-logo">MV</a>
-    <ul class="nav-links">
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="nav-cluster">
+      <ul class="nav-links">
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme" title="Toggle light/dark theme">
+        <svg class="theme-icon theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+        </svg>
+        <svg class="theme-icon theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </div>
   </nav>
 
   <!-- HERO -->
   <section id="hero">
     <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
     <div class="hero-inner">
       <div class="hero-content">
-        <div class="hero-eyebrow">MFRM Graduate · Rotman School of Management</div>
-        <h1 class="hero-name">Mohammad<br>Valizadehmoghadam</h1>
-        <p class="hero-desc">
-          I'm a Master of Financial Risk Management (MFRM) graduate from Rotman (University of Toronto)
-          with a background in Financial and Business Economics from York University. I'm passionate about
-          Economics, Risk, and FinTech, especially where these fields overlap. I love building things
-          people find useful, and this site is where I keep my most up-to-date work, without worrying
-          about fitting everything in one page.
-        </p>
+        <div class="hero-header-row">
+          <div class="hero-avatar" aria-hidden="true">
+            <img src="General%20docs/headshot.png" alt="" width="96" height="96" />
+          </div>
+          <div class="hero-heading-block">
+            <h1 class="hero-name">Mohammad Valizadehmoghadam</h1>
+            <p class="hero-eyebrow">Toronto, Canada</p>
+          </div>
+        </div>
+        <div class="hero-about-region" role="region" aria-labelledby="hero-about-heading">
+        <p class="hero-content-heading" id="hero-about-heading">About me</p>
+        <div class="hero-desc-block">
+          <p class="hero-desc">
+            I work on building around problems in financial risk and decision-making, especially where models are actually used in practice.
+          </p>
+          <p class="hero-desc">
+            My focus is on the gap between model output and real decisions, where data is useful but not sufficient, and where new technology is beginning to reshape how risk is approached.
+          </p>
+          <p class="hero-desc-secondary">
+            Rotman MFRM grad, ex-CIBC, always learning and building something new.
+          </p>
+        </div>
+        </div>
+        <div class="hero-now-inline" role="region" aria-labelledby="hero-now-heading">
+          <p class="hero-content-heading" id="hero-now-heading">Me, Right Now!</p>
+          <ul class="hero-now-cards">
+            <li class="hero-now-card">
+              <div class="hero-now-card-top">
+                <span class="hero-now-emoji" aria-hidden="true">📖</span>
+                <span class="hero-now-label">Reading</span>
+              </div>
+              <p class="hero-now-value hero-now-value--stacked">
+                <span class="hero-now-value-line">Asset Management</span>
+                <span class="hero-now-value-sub">by Andrew Ang</span>
+              </p>
+            </li>
+            <li class="hero-now-card">
+              <div class="hero-now-card-top">
+                <span class="hero-now-emoji" aria-hidden="true">🎓</span>
+                <span class="hero-now-label">Studying</span>
+              </div>
+              <p class="hero-now-value">FRM Level I</p>
+            </li>
+            <li class="hero-now-card">
+              <div class="hero-now-card-top">
+                <span class="hero-now-emoji" aria-hidden="true">🔨</span>
+                <span class="hero-now-label">Building</span>
+              </div>
+              <p class="hero-now-value">Portfolio Optimization Model</p>
+            </li>
+            <li class="hero-now-card">
+              <div class="hero-now-card-top">
+                <span class="hero-now-emoji" aria-hidden="true">🎧</span>
+                <span class="hero-now-label">Podcasts</span>
+              </div>
+              <p class="hero-now-value">Market Call<br />The Meb Faber Show</p>
+            </li>
+          </ul>
+        </div>
         <div class="hero-ctas">
           <a href="General%20docs/Resume.pdf" class="btn btn-primary" download>Download Resume</a>
           <a href="#contact" class="btn btn-secondary">Get in Touch</a>
@@ -46,11 +106,6 @@
           <a href="https://github.com/Thismv" target="_blank" rel="noopener">↗ GitHub</a>
           <div class="divider"></div>
           <a href="https://www.linkedin.com/in/thismv" target="_blank" rel="noopener">↗ LinkedIn</a>
-        </div>
-      </div>
-      <div class="hero-photo">
-        <div class="hero-photo-card">
-          <img src="General%20docs/headshot.png" alt="Mohammad Valizadehmoghadam" />
         </div>
       </div>
     </div>
@@ -381,6 +436,29 @@
   </footer>
 
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    (function () {
+      const root = document.documentElement;
+      const key = 'mv-theme';
+      const toggle = document.getElementById('theme-toggle');
+      function applyTheme(mode) {
+        if (mode === 'light') root.setAttribute('data-theme', 'light');
+        else root.removeAttribute('data-theme');
+        if (toggle) {
+          toggle.setAttribute('aria-label', mode === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
+        }
+      }
+      try {
+        if (localStorage.getItem(key) === 'light') applyTheme('light');
+      } catch (e) {}
+      if (toggle) {
+        toggle.addEventListener('click', () => {
+          const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+          applyTheme(next);
+          try { localStorage.setItem(key, next); } catch (e) {}
+        });
+      }
+    })();
+
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 20);
