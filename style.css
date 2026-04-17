@@ -550,12 +550,21 @@ h2.section-title {
   line-height: 1.75;
 }
 
+/* ── PROJECT CONTROLS ── */
+.project-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  margin-bottom: 2rem;
+}
+
 /* ── PROJECT FILTERS ── */
 .project-filters {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem 0.5rem;
-  margin-bottom: 2rem;
 }
 .project-filter-btn {
   font-family: var(--font-mono);
@@ -579,6 +588,24 @@ h2.section-title {
   color: var(--ink);
   border-bottom-color: var(--accent);
   background: var(--accent-dim);
+}
+.project-sort-btn {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.5rem 0.9rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
+}
+.project-sort-btn:hover {
+  color: var(--accent-soft);
+  border-color: var(--accent);
 }
 
 /* ── PROJECTS ── */

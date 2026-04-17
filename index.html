@@ -194,17 +194,18 @@
   <!-- PROJECTS -->
   <section id="projects">
     <div class="section-label">Projects</div>
-    <div class="project-filters reveal" role="tablist" aria-label="Filter projects">
-      <button type="button" class="project-filter-btn is-active" data-filter="all" role="tab" aria-selected="true">All</button>
-      <button type="button" class="project-filter-btn" data-filter="quantitative-finance" role="tab" aria-selected="false">Quantitative Finance</button>
-      <button type="button" class="project-filter-btn" data-filter="research" role="tab" aria-selected="false">Research</button>
-      <button type="button" class="project-filter-btn" data-filter="risk" role="tab" aria-selected="false">Risk</button>
-      <button type="button" class="project-filter-btn" data-filter="proof-of-concept" role="tab" aria-selected="false">Proof-Of-Concept</button>
-      <button type="button" class="project-filter-btn" data-filter="in-progress" role="tab" aria-selected="false">In Progress</button>
+    <div class="project-controls reveal">
+      <div class="project-filters" role="tablist" aria-label="Filter projects">
+        <button type="button" class="project-filter-btn is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button type="button" class="project-filter-btn" data-filter="investment" role="tab" aria-selected="false">Investment</button>
+        <button type="button" class="project-filter-btn" data-filter="risk" role="tab" aria-selected="false">Risk</button>
+        <button type="button" class="project-filter-btn" data-filter="in-progress" role="tab" aria-selected="false">In Progress</button>
+      </div>
+      <button type="button" class="project-sort-btn" id="project-sort-btn" data-sort="newest" aria-label="Sort projects by date, newest first">Sort: Newest</button>
     </div>
     <div class="projects-grid" id="projects-grid">
 
-      <article class="project-card reveal" data-category="proof-of-concept">
+      <article class="project-card reveal" data-category="risk" data-sort-key="202601">
         <div class="project-card-thumb has-image">
           <img class="project-thumb-img" src="Projects%20docs/AI-Driven%20Fraud%20Intelligence%20Pipeline.png" alt="AI-Driven Fraud Intelligence Pipeline preview" width="600" height="360" loading="lazy" decoding="async" />
           <span class="project-thumb-placeholder" aria-hidden="true">FIP</span>
@@ -241,7 +242,7 @@
         </div>
       </article>
 
-      <article class="project-card reveal" data-category="risk">
+      <article class="project-card reveal" data-category="risk" data-sort-key="202604">
         <div class="project-card-thumb has-image">
           <img class="project-thumb-img" src="Projects%20docs/Market%20Risk.png" alt="Market Risk: VaR, ES &amp; Stress Testing preview" width="600" height="360" loading="lazy" decoding="async" />
           <span class="project-thumb-placeholder" aria-hidden="true">MR</span>
@@ -278,7 +279,7 @@
         </div>
       </article>
 
-      <article class="project-card reveal" data-category="research">
+      <article class="project-card reveal" data-category="risk" data-sort-key="202505">
         <div class="project-card-thumb has-image">
           <img class="project-thumb-img" src="Projects%20docs/Market%20Resilience%20Index.png" alt="Market Resilience Index preview" width="600" height="360" loading="lazy" decoding="async" />
           <span class="project-thumb-placeholder" aria-hidden="true">MRI</span>
@@ -312,7 +313,7 @@
         </div>
       </article>
 
-      <article class="project-card reveal" data-category="quantitative-finance">
+      <article class="project-card reveal" data-category="investment" data-sort-key="202604">
         <div class="project-card-thumb has-image">
           <img class="project-thumb-img" src="Projects%20docs/S%26P%20500%20Factor%20Replication.png" alt="S&amp;P 500 Factor Replication preview" width="600" height="360" loading="lazy" decoding="async" />
           <span class="project-thumb-placeholder" aria-hidden="true">FR</span>
@@ -346,7 +347,7 @@
         </div>
       </article>
 
-      <article class="project-card reveal" data-category="proof-of-concept">
+      <article class="project-card reveal" data-category="risk" data-sort-key="202501">
         <div class="project-card-thumb has-image">
           <img class="project-thumb-img" src="Projects%20docs/Captive%20Insurance%20Feasibility%20Analysis.png" alt="Captive Insurance Feasibility Analysis preview" width="600" height="360" loading="lazy" decoding="async" />
           <span class="project-thumb-placeholder" aria-hidden="true">CI</span>
@@ -354,7 +355,7 @@
         <div class="project-card-body">
           <div class="project-card-date">Jan 2025 – Apr 2025</div>
           <div class="project-badges">
-            <span class="project-badge badge-poc">Alternative Investment</span>
+            <span class="project-badge badge-poc">Alternative Risk</span>
           </div>
           <h3>Captive Insurance Feasibility Analysis</h3>
           <div class="project-desc-wrap">
@@ -379,13 +380,13 @@
         </div>
       </article>
 
-      <article class="project-card reveal" data-category="in-progress">
+      <article class="project-card reveal" data-category="in-progress" data-sort-key="202700">
         <div class="project-card-thumb has-image">
           <img class="project-thumb-img" src="Projects%20docs/Portfolio%20Optimization.png" alt="Portfolio Optimization preview" width="600" height="360" loading="lazy" decoding="async" />
           <span class="project-thumb-placeholder" aria-hidden="true">PO</span>
         </div>
         <div class="project-card-body">
-          <div class="project-card-date">In Development</div>
+          <div class="project-card-date">In Progress</div>
           <div class="project-badges">
             <span class="project-badge badge-progress">Coming Soon</span>
           </div>
@@ -573,10 +574,23 @@
 
     const grid = document.getElementById('projects-grid');
     const filterBtns = document.querySelectorAll('.project-filter-btn');
+    const sortBtn = document.getElementById('project-sort-btn');
     const projectCards = grid ? [...grid.querySelectorAll('.project-card')] : [];
     const FILTER_MS = 420;
+    let activeFilter = (document.querySelector('.project-filter-btn.is-active') || {}).dataset.filter || 'all';
+
+    function sortProjectCards(mode) {
+      const sorted = [...projectCards].sort((a, b) => {
+        const aKey = Number(a.dataset.sortKey || 0);
+        const bKey = Number(b.dataset.sortKey || 0);
+        if (mode === 'oldest') return aKey - bKey;
+        return bKey - aKey;
+      });
+      sorted.forEach((card) => grid.appendChild(card));
+    }
 
     function setFilter(filter) {
+      activeFilter = filter;
       filterBtns.forEach((b) => {
         const on = b.dataset.filter === filter;
         b.classList.toggle('is-active', on);
@@ -616,4 +630,23 @@
     filterBtns.forEach((btn) => {
       btn.addEventListener('click', () => setFilter(btn.dataset.filter || 'all'));
     });
+
+    if (sortBtn) {
+      sortBtn.addEventListener('click', () => {
+        const nextMode = sortBtn.dataset.sort === 'newest' ? 'oldest' : 'newest';
+        sortBtn.dataset.sort = nextMode;
+        sortBtn.textContent = nextMode === 'newest' ? 'Sort: Newest' : 'Sort: Oldest';
+        sortBtn.setAttribute(
+          'aria-label',
+          nextMode === 'newest'
+            ? 'Sort projects by date, newest first'
+            : 'Sort projects by date, oldest first'
+        );
+        sortProjectCards(nextMode);
+        setFilter(activeFilter);
+      });
+    }
+
+    sortProjectCards('newest');
+    setFilter(activeFilter);
   </script>
