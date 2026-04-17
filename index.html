@@ -51,13 +51,13 @@
         <p class="hero-content-heading" id="hero-about-heading">About me</p>
         <div class="hero-desc-block">
           <p class="hero-desc">
-            I work on building around problems in financial risk and decision-making, with a focus on how models are used in practice.
+            I started in economics and ended up in risk, not by accident but because it sits at the intersection of everything I find interesting. Finance, uncertainty, technology, and the practical challenge of making decisions with incomplete information.
           </p>
           <p class="hero-desc">
-            My focus is on the gap between model output and real decisions, where data is useful but not sufficient, and where new technology is beginning to reshape how risk is approached.
+            I spend my time building analytical tools and frameworks, mostly in financial risk and FinTech, and trying to understand problems well enough to actually solve them.
           </p>
           <p class="hero-desc-secondary">
-            Rotman MFRM grad, ex-CIBC, always learning and building something new.
+            Rotman MFRM grad, ex-CIBC, always learning.
           </p>
         </div>
         </div>
@@ -198,6 +198,7 @@
       <button type="button" class="project-filter-btn is-active" data-filter="all" role="tab" aria-selected="true">All</button>
       <button type="button" class="project-filter-btn" data-filter="quantitative-finance" role="tab" aria-selected="false">Quantitative Finance</button>
       <button type="button" class="project-filter-btn" data-filter="research" role="tab" aria-selected="false">Research</button>
+      <button type="button" class="project-filter-btn" data-filter="risk" role="tab" aria-selected="false">Risk</button>
       <button type="button" class="project-filter-btn" data-filter="proof-of-concept" role="tab" aria-selected="false">Proof-Of-Concept</button>
       <button type="button" class="project-filter-btn" data-filter="in-progress" role="tab" aria-selected="false">In Progress</button>
     </div>
@@ -237,6 +238,43 @@
             <span class="project-tag">Risk Monitoring</span>
           </div>
           <a href="https://github.com/Thismv/Fraud-Intelligence-Pipeline" class="project-github" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </article>
+
+      <article class="project-card reveal" data-category="risk">
+        <div class="project-card-thumb has-image">
+          <img class="project-thumb-img" src="Projects%20docs/Market%20Risk.png" alt="Market Risk: VaR, ES &amp; Stress Testing preview" width="600" height="360" loading="lazy" decoding="async" />
+          <span class="project-thumb-placeholder" aria-hidden="true">MR</span>
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-date">April 2026</div>
+          <div class="project-badges">
+            <span class="project-badge badge-risk">Market Risk</span>
+          </div>
+          <h3>Market Risk: VaR, ES &amp; Stress Testing</h3>
+          <div class="project-desc-wrap">
+            <p class="project-desc-short">Multi-asset market risk framework: historical simulation VaR and Expected Shortfall, stress testing, and VaR backtesting across equity, IG/HY credit, and US Treasury instruments.</p>
+            <div class="project-desc-extra" aria-hidden="true">
+              <div class="project-desc-extra-inner">
+                <p>The notebook covers instrument pricing and sensitivities, historical simulation for VaR and Expected Shortfall, VaR backtesting, a severe macro stress scenario, risk limits, DV01 by tenor, factor correlations, and FRTB liquidity horizon scaling.</p>
+                <p>It follows the same order of steps a desk would use so the story stays grounded in practice.</p>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="project-read-more" aria-expanded="false">
+            <span class="project-read-more-label">Read more</span>
+            <span class="project-read-more-arrow" aria-hidden="true"></span>
+          </button>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Jupyter</span>
+            <span class="project-tag">VaR</span>
+            <span class="project-tag">Expected Shortfall</span>
+            <span class="project-tag">Stress Testing</span>
+            <span class="project-tag">FRTB</span>
+            <span class="project-tag">Basel III</span>
+          </div>
+          <a href="https://github.com/Thismv/Market-Risk-VaR-ES-Stress-Test" class="project-github" target="_blank" rel="noopener">View on GitHub</a>
         </div>
       </article>
 
