@@ -590,6 +590,15 @@ h2.section-title {
   background: var(--accent-dim);
 }
 .project-sort-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  white-space: nowrap;
+  line-height: 1;
+  text-decoration: none;
   font-family: var(--font-mono);
   font-size: 0.7rem;
   font-weight: 500;
@@ -606,6 +615,11 @@ h2.section-title {
 .project-sort-btn:hover {
   color: var(--accent-soft);
   border-color: var(--accent);
+  background: var(--accent-dim);
+}
+.project-sort-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 /* ── PROJECTS ── */
