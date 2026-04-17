@@ -1,0 +1,5 @@
+.DS_Store
+
+# Ignore content folders requested
+General docs/
+Projects docs/
