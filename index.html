@@ -86,7 +86,7 @@
                 <span class="hero-now-emoji" aria-hidden="true">🔨</span>
                 <span class="hero-now-label">Building</span>
               </div>
-              <p class="hero-now-value">Portfolio Optimization Model</p>
+              <p class="hero-now-value">Credit Risk Analytics</p>
             </li>
             <li class="hero-now-card">
               <div class="hero-now-card-top">
@@ -199,7 +199,6 @@
         <button type="button" class="project-filter-btn is-active" data-filter="all" role="tab" aria-selected="true">All</button>
         <button type="button" class="project-filter-btn" data-filter="investment" role="tab" aria-selected="false">Investment</button>
         <button type="button" class="project-filter-btn" data-filter="risk" role="tab" aria-selected="false">Risk</button>
-        <button type="button" class="project-filter-btn" data-filter="in-progress" role="tab" aria-selected="false">In Progress</button>
       </div>
       <button type="button" class="project-sort-btn" id="project-sort-btn" data-sort="newest" aria-label="Sort projects by date, newest first">Sort: Newest</button>
     </div>
@@ -380,22 +379,24 @@
         </div>
       </article>
 
-      <article class="project-card reveal" data-category="in-progress" data-sort-key="202700">
+      <article class="project-card reveal" data-category="investment" data-sort-key="202605">
         <div class="project-card-thumb has-image">
-          <img class="project-thumb-img" src="Projects%20docs/Portfolio%20Optimization.png" alt="Portfolio Optimization preview" width="600" height="360" loading="lazy" decoding="async" />
+          <img class="project-thumb-img" src="Projects%20docs/portfolio_optimization.png" alt="Portfolio Optimization preview" width="600" height="360" loading="lazy" decoding="async" />
           <span class="project-thumb-placeholder" aria-hidden="true">PO</span>
         </div>
         <div class="project-card-body">
-          <div class="project-card-date">In Progress</div>
+          <div class="project-card-date">May 2026</div>
           <div class="project-badges">
-            <span class="project-badge badge-progress">Coming Soon</span>
+            <span class="project-badge badge-quantitative-finance">Quantitative Finance</span>
           </div>
           <h3>Portfolio Optimization</h3>
           <div class="project-desc-wrap">
-            <p class="project-desc-short">A quantitative portfolio optimization build in progress, focused on risk-aware allocation and analytics.</p>
+            <p class="project-desc-short">Mean-variance portfolio optimization and Fama–French (plus momentum) factor analysis across U.S. mutual funds, smart beta ETFs, and hedge fund indices, separating alpha from factor exposure and testing six constrained optimizers in- vs out-of-sample.</p>
             <div class="project-desc-extra" aria-hidden="true">
               <div class="project-desc-extra-inner">
-                <p>Planned scope includes Python-based workflows, VaR and related risk measures, and optimization methods for portfolio construction — details will be updated as the project matures.</p>
+                <p>Each fund’s excess returns are regressed on MKTRF, SMB, HML, UMD, RMW, and CMA. Portfolios include long-only and long–short global minimum variance and max-Sharpe, a tracking-error-capped max-Sharpe versus equal weight, and a factor-neutral max-Sharpe (±200% per asset). Inputs are estimated in-sample (Jan 2010–Dec 2019) and evaluated out-of-sample (Jan 2020–Dec 2024) without re-estimation; reported statistics are annualized.</p>
+                <p>A consistent takeaway: unconstrained max-Sharpe and long-short designs overfit in-sample; GMV and tracking-error-bounded strategies tend to generalize better out-of-sample because they rely less on hard-to-estimate expected returns. Hedge fund indices show the most stable in-sample to out-of-sample transfer among the three universes.</p>
+                <p>Fund return data is bundled in the repo with permission; factor data draws on Kenneth R. French’s library. Data-quality work (e.g. correcting a bad monthly return for FSPHX) is documented in the notebook. Completed as part of the Master of Financial Risk Management (MFRM) program, Rotman School of Management, University of Toronto.</p>
               </div>
             </div>
           </div>
@@ -405,10 +406,14 @@
           </button>
           <div class="project-tags">
             <span class="project-tag">Python</span>
-            <span class="project-tag">VaR</span>
-            <span class="project-tag">Portfolio Analytics</span>
-            <span class="project-tag">Optimization</span>
+            <span class="project-tag">Jupyter</span>
+            <span class="project-tag">pandas</span>
+            <span class="project-tag">statsmodels</span>
+            <span class="project-tag">SciPy</span>
+            <span class="project-tag">Fama–French</span>
+            <span class="project-tag">Mean-variance</span>
           </div>
+          <a href="https://github.com/Thismv/Portfolio_Optimization" class="project-github" target="_blank" rel="noopener">View on GitHub</a>
         </div>
       </article>
 
